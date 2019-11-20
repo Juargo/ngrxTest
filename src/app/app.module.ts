@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
-import {LoginReducer} from './app.reducer'
+import {createLoginReducer} from './app.reducer'
 import {StoreDevtoolsModule} from '@ngrx/store-devtools'
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,7 +15,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({
-      users:LoginReducer
+      users:createLoginReducer
     }),
     StoreDevtoolsModule.instrument()
   ],

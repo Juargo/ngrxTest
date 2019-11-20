@@ -1,6 +1,7 @@
 import {User} from './app.model'
 
 export interface LoginState {
-    username: User
+    username: string
+    mail:string
     //isLogin: boolean
 }
